@@ -1,0 +1,393 @@
+@import url("variables.css");
+
+/* Navigation */
+nav {
+    /* Höhe so definieren, dass es zusammen mit dem Hero 100vh ergibt. */
+    height: 10vh;
+    background-color: var(--base-dark);
+    color: var(--light);
+}
+
+nav a {
+    /* Muss hier noch mal definiert werden, da bei Links vermutlich die Standardfarben gelten und nicht von vom Elternelement übernommen werden. */
+    color: white;
+}
+
+header {
+    position: sticky;
+    /* width: 100%; Wahrscheinlich nicht nötig, da default. */
+    top: 0;
+}
+
+/* Navigation für breite Bildschirme */
+.full-nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* mobile-nav */
+.mobile-nav {
+    display: none;
+}
+
+@media screen and (width<=768px) {
+    .full-nav {
+        display: none !important;
+    }
+
+    .mobile-nav {
+        display: block;
+        width: 100%;
+        font-size: 175%;
+        text-align: right;
+    }
+
+    #hamburger {
+        font-size: 200%;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    #close-btn {
+        font-size: 200%;
+        display: none;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    #open-nav-leaf {
+        position: absolute;
+        left: 4rem;
+        top: 5rem;
+    }
+
+    .open-nav {
+        display: none;
+    }
+
+    .open-nav.active {
+        list-style-type: none;
+        display: block;
+        line-height: 1.5;
+        text-align: right;
+        /* flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem; */
+        height: 400px;
+        margin: 0;
+        padding: 6rem 4rem;
+        background-color: #222d;
+    }
+}
+
+/* Hero-Sektion */
+.hero {
+    min-height: 90vh;
+    /* min-height statt height, damit es größer werden kann, wenn das Bild auf der Smartphone-Ansicht unter dem Text ist. */
+}
+
+.hero-wrapper {
+    gap: 5%;
+    width: 75%;
+    /* Frustrierendes Learning: Man muss height: 100%; explizit angeben, sonst bestimmt das Bild im Kind-Element die Höhe des hero-wrappers und die height-Angabe in .hero-wrapper>img würde eiskalt ignoriert. Bei CSS wird also nicht angenommen, dass das Kind-Element (hero-wrapper) nicht größer sein darf als das Eltern-Element (hero).*/
+    height: 100%;
+}
+
+/* Offene Frage: Das Bild shrinkt komischerweise nie. */
+.hero-wrapper>img {
+    /* width: 267px; */
+    /* height: 70%; */
+    /* width: auto; */
+    flex-basis: 267px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.hero-left-block {
+    flex: 1 1 500px;
+    max-width: 576px;
+}
+
+@media screen and (width<992px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+
+    .hero-wrapper>img {
+        margin-bottom: 4rem;
+        flex-basis: 267px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    .hero-left-block {
+        margin-bottom: 4rem;
+        flex: 1 1 200px;
+        max-width: 576px;
+    }
+}
+
+/* Featured products */
+.products-wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+    gap: 40px;
+    /* height: 1164px;
+    width: 1301px; */
+    /* height: 100%; */
+}
+
+/* Dafür sorgen, dass nicht mehr als drei Produkte nebeneinander dargestellt werden - egal wie breit der Bildschirm ist. */
+@media screen and (width>1091px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product {
+    flex-direction: column;
+    /* Horizontal zentrieren */
+    align-items: center;
+    /* vertikal den gesamten Platz nutzen */
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #EFEBE5;
+    box-shadow: 8px 8px 24px #30303080;
+    /* Offene Frage: Warum bekommen die cards durch den nächsten Befehl nicht dieselbe Höhe wie der product-container??? Wahrscheinliche Lösung: Das übergeordnete Element ist ein grid, das mehrere Zeilen haben kann. --> Die zur Verfügung stehende Höhe ist dann kleiner. */
+    /* height: 100%; */
+}
+
+
+.product>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Offene Frage: In manchen Situationen bleiben trotzdem weiße Rahmen neben den Bildern. Selbst object-fit: fill!important; versagt! */
+    margin-bottom: 1rem;
+}
+
+/* Name und Preis sowie Farben und Button links und rechts platzieren */
+.product>div {
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.farbwahl a {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    display: inline-block;
+    /* visibility: collapse; */
+    width: 1rem;
+    height: 1rem;
+}
+
+.farbwahl-wrapper {
+    flex-direction: column;
+}
+
+.farbwahl-wrapper div:first-child {
+    margin-bottom: 4px;
+}
+
+.topforange {
+    background-color: rgb(252, 172, 99);
+}
+
+.topfgrau {
+    background-color: rgb(230, 230, 230);
+}
+
+.topfrosa {
+    background-color: rgb(212, 142, 132);
+}
+
+.topfdunkel {
+    background-color: rgb(110, 87, 47);
+}
+
+.topfbraun {
+    background-color: rgb(139, 84, 33);
+}
+
+
+/* About-Section */
+.about {
+    justify-content: center;
+}
+
+.about-wrapper {
+    width: 75%;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-wrapper>div {
+    flex: 1 1 50%;
+}
+
+.about-wrapper>img {
+    object-fit: cover;
+    flex: 0 1 534px;
+}
+
+@media screen and (width<992px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Grid-Sektion */
+.image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 1fr;
+    width: 75%;
+    gap: 2rem;
+}
+
+/* Painful learning: Wenn man die Bilder ansprechen will, muss man sie auch direkt ansprechen. Wenn man nur .image-grid div {} anspricht, dann springen die Bilder trotzdem aus dem Container raus. */
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item-3 {
+    grid-column: span 2;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.grid-item-3 h4 {
+    font-size: 250%;
+    line-height: 150%;
+}
+
+.grid-item-4 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item-5 {
+    grid-row: span 2;
+}
+
+@media screen and (width<1800px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .grid-item-4,
+    .grid-item-7 {
+        display: none;
+    }
+
+    .grid-item-5 {
+        grid-row: span 1;
+    }
+}
+
+@media screen and (width<992px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .grid-item-3 {
+        grid-column: span 1;
+    }
+
+    .grid-item-2,
+    .grid-item-6 {
+        display: none;
+    }
+}
+
+
+/* Kontakt-Sektion */
+.kontakt-sektion {
+    width: 75%;
+    margin: 0 auto;
+    gap: calc(-4rem + 15%);
+}
+
+.kontakt-form {
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 300px;
+}
+
+.kontakt-sektion input {
+    height: 2.5rem;
+    width: 100%;
+    /* padding: auto 1rem; */
+    /* padding-top: auto; */
+    padding-left: 1rem;
+}
+
+.kontakt-sektion textarea {
+    height: 7rem;
+    width: 100%;
+    /* padding: auto 1rem; */
+    /* padding-top: auto; */
+    padding: 1rem;
+}
+
+@media screen and (width<992px) {
+    .kontakt-sektion {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+/* Footer */
+.icons {
+    gap: 0.8rem;
+}
+
+footer {
+    width: 75%;
+    margin: 0 auto;
+    color: var(--light);
+}
+
+footer a {
+    color: var(--light);
+}
+
+footer h6 {
+    margin: 0rem;
+}
+
+.contact-footer,
+.rechtliches,
+.social-icons {
+    margin: 3rem;
+}
+
+.social-icons {
+    gap: 2rem;
+}
+
+@media screen and (width<992px) {
+    footer {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    .contact-footer,
+    .rechtliches,
+    .social-icons {
+        margin: 1rem 3rem;
+    }
+}

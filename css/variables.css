@@ -1,0 +1,16 @@
+:root {
+    --primary: #602783;
+    --secondary: #D0BA86;
+    --light: #FCFBF8;
+    --dark: #1D180B;
+    --base-dark: #3B7E71;
+    --base-light: #D2EAE5;
+    /* Schriftfamilie laut Design-System für die headings */
+    --heading-text: 'Poppins', 'Arial', sans-serif;
+    --body-text: 'Lora', 'Times New Roman', serif;
+    /* Schriftfamilie für body text und functional text */
+    --functional-text: 'Poppins', 'Arial', sans-serif;
+    /* Anmerkung: Wir definieren es lieber zweimal, damit wir uns nicht merken müssen, dass wir bei functional-text auch body-text schreiben. */
+    /* Anmerkung: Times New Roman ist eine Serifenschrift, bei sans-serif kann man Arial oder Helvetica verwenden. */
+    --extra-light: 100;
+}

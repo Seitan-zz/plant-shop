@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Naturshop - wunderschöne, hochwertige Pflanzen im Angebot">
+    <meta name="keywords" content="schön, hochwertig, Pflanzen, Shop, nachhaltig, Natur zuhause">
+    <meta name="author" content="Christine Hogg, umgesetzt von Dirk Reuter">
+    <link rel="icon" type="image/x-icon" href="img/shop-logo.png">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Natur zuhause</title>
+</head>
+
+<body>
+    <header>
+        <nav class="full-nav flex px-3">
+            <a href="#"><img src="img/shop-logo.png" alt="Shop-Logo (ein Blatt)"></a>
+            <!-- Mittlere Navigation -->
+            <div class="flex">
+                <a href="#ueber-uns" class="px-2">Über Uns</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#shop" class="px-2">Shop</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <!-- Icons rechts -->
+            <div class="flex icons">
+                <a href="#"><img src="img/search-icon.png" alt=""></a><a href="#"><img src="img/shopping-cart.png"
+                        alt=""></a><a href="#"><img src="img/heart.png" alt=""></a>
+            </div>
+        </nav>
+        <nav class="mobile-nav">
+            <a id="hamburger" href="javascript:void(0)" onclick="openNav()">&equiv;</a>
+            <a id="close-btn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+
+            <ul class="open-nav" id="open-nav">
+
+                <li class="icons"><a href="#" onclick="closeNav()"><img src="img/search-icon.png"
+                            alt=""></a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="closeNav()"><img
+                            src="img/shopping-cart.png" alt=""></a>&nbsp;&nbsp;&nbsp;<a href="#"
+                        onclick="closeNav()"><img src="img/heart.png" alt=""></a>
+                </li>
+                <li id="open-nav-leaf"><a href="#" onclick="closeNav()"><img src=" img/shop-logo.png"
+                            alt="Shop-Logo (ein Blatt)"></a>
+                </li>
+                <hr>
+                <li><a href="#ueber-uns" onclick="closeNav()">Über Uns</a></li>
+                <li><a href="#kontakt" onclick="closeNav()">Kontakt</a></li>
+                <li><a href="#shop" onclick="closeNav()">Shop</a></li>
+                <li><a href="#blog" onclick="closeNav()">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero-Sektion -->
+        <section class=" hero bg-base-dark flex justify-content-center align-items-center">
+            <div class="hero-wrapper flex align-items-center justify-content-center">
+                <!-- Text links -->
+                <div class="hero-left-block">
+                    <h2 style="text-decoration-line: underline;">Naturzuhause</h2>
+                    <p class="byline">Natürlich schön wohnen</p>
+                    <p>Willkommen bei Naturzuhause - Ihrem Experten für stilvolle und pflegeleichte
+                        Hauspflanzen.
+                        Entdecken Sie unsere vielfältige Auswahl und bringen Sie die Schönheit der Natur in
+                        Ihr Zuhause!
+                    </p>
+                    <a href="#ueber-uns" class="button btn-primary">Mehr erfahren&nbsp;&nbsp;&nbsp;↓</a>
+                </div>
+                <!-- Bild -->
+                <img src="img/unsplash_OFJ6DnNij1M.jpg" class="img-fluid" alt="">
+            </div>
+        </section>
+
+        <!-- Produkte-Sektion -->
+        <section class="products" id="shop">
+            <div class="products-wrapper py-4">
+                <h2>Featured Products</h2>
+                <div class="product-container">
+                    <div class="product-1 product flex">
+                        <img src="img/product-pic-00.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Smaragdschatz</h5>
+                            <h5>25 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                    <div class="product-2 product flex">
+                        <img src="img/product-pic-01.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Dschungeltraum</h5>
+                            <h5>30 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                    <div class="product-3 product flex">
+                        <img src="img/product-pic-02-lauren-mancke-DpphPG9ENsI-unsplash.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Sonnengruß</h5>
+                            <h5>50 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                    <div class="product-4 product flex">
+                        <img src="img/product-pic-03.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Zen-Garten</h5>
+                            <h5>35 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                    <div class="product-5 product flex">
+                        <img src="img/product-pic-04-unsplash_tSWTSzwSz6M.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Smaragdschatz</h5>
+                            <h5>65 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                    <div class="product-6 product flex">
+                        <img src="img/product-pic-05.jpg" alt="">
+                        <div class="name-preis flex">
+                            <h5>Grünes Wunder</h5>
+                            <h5>60 €</h5>
+                        </div>
+                        <div class="farbe-kaufen flex">
+                            <div class="farbwahl-wrapper flex">
+                                <div>Topffarben</div>
+                                <div class="farbwahl">
+                                    <a href="#" class="topforange">&nbsp;</a>
+                                    <a href="#" class="topfgrau">&nbsp;</a>
+                                    <a href="#" class="topfrosa">&nbsp;</a>
+                                    <a href="#" class="topfdunkel">&nbsp;</a>
+                                    <a href="#" class="topfbraun">&nbsp;</a>
+                                </div>
+                            </div>
+                            <button>Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About-Sektion -->
+        <section class="about bg-base-light flex py-4" id="ueber-uns">
+            <div class="about-wrapper flex">
+                <img src="img/about-unsplash_rrBXHANGjng.png" alt="" class="img-fluid">
+                <div class="about-text">
+                    <h2>Über uns</h2>
+                    <p>Bei Naturzuhause sind wir davon überzeugt, dass Pflanzen das Wohlbefinden
+                        steigern und jedem Raum
+                        eine besondere Atmosphäre verleihen. Unser Ziel ist es, Ihnen hochwertige und
+                        pflegeleichte
+                        Pflanzen anzubieten, die Ihrem Zuhause nicht nur eine grüne Note verleihen,
+                        sondern auch Ihre
+                        Lebensqualität verbessern.</p>
+
+                    <p>
+                        Unser Team besteht aus leidenschaftlichen Pflanzenliebhabern, die über
+                        umfangreiches Wissen und
+                        Erfahrung in der Pflege und Auswahl der besten Pflanzen verfügen. Wir wählen
+                        unsere Pflanzen
+                        sorgfältig aus und achten darauf, dass sie unter optimalen Bedingungen gedeihen,
+                        bevor sie den
+                        Weg zu Ihnen nach Hause finden.
+                        Egal, ob Sie ein erfahrener Pflanzenprofi oder ein Anfänger sind, wir stehen
+                        Ihnen mit Rat und
+                        Tat zur Seite. Auf unserer Website finden Sie hilfreiche Pflegehinweise und
+                        Tipps, damit Ihre
+                        Pflanzen lange gesund und schön bleiben.
+                    </p>
+
+                    <p>Mit Naturzuhause möchten wir Ihnen nicht nur Pflanzen, sondern auch ein Stück
+                        Natur und Freude in
+                        Ihr Zuhause bringen. Lassen Sie sich von unserer Leidenschaft anstecken und
+                        entdecken Sie die
+                        Welt der Hauspflanzen auf eine neue Art und Weise.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex justify-content-center gallery py-4">
+            <!-- insert gallery -->
+            <div class="image-grid grid">
+                <div class="grid-item-1"><img src="img/grid-image-1.jpg" alt=""></div>
+                <div class="grid-item-2"><img src="img/grid-image-2.jpg" alt=""></div>
+                <div class="flex align-items-center justify-content-center grid-item-3">
+                    <h4>Grüner leben, <br> schöner wohnen.</h4>
+                </div>
+                <div class="grid-item-4"><img src="img/grid-image-3.jpg" alt=""></div>
+                <div class="grid-item-5"><img src="img/grid-image-4.jpg" alt=""></div>
+                <div class="grid-item-6"><img src="img/grid-image-5.jpg" alt=""></div>
+                <div class="grid-item-7"><img src="img/grid-image-6.jpg" alt=""></div>
+            </div>
+
+        </section>
+
+        <!-- Kontakt-Sektion -->
+        <section id="kontakt"
+            class="kontakt-sektion py-4 px-4 flex align-items-center justify-content-center bg-base-light">
+            <form class="kontakt-form flex">
+                <div class="heading">
+                    <h2 class="fragen">Fragen?</h2>
+                    <h5 class="kontakt-text byline">Nimm Kontakt zu uns auf.</h5>
+                </div>
+                <div class="form-field">
+                    <label for="name">Vorname & Nachname</label><br>
+                    <input type="text" id="name" name="name" placeholder="Vorname & Nachname" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">E-Mail Adresse</label><br>
+                    <input type="email" id="email" name="email" placeholder="E-Mail Adresse" required>
+                </div>
+                <div class="form-field">
+                    <label for="message">Nachricht</label><br>
+                    <textarea id="message" name="message" placeholder="Ihre Nachricht" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary button">
+                    Abschicken&nbsp;&nbsp;&nbsp;
+                    <img src="img/send-fill.svg" alt="">
+                </button>
+            </form>
+            <img class="img-fluid" src="img/form-image.jpg" alt="Ein Foto mit Pflanzenblättern im Vordergrund">
+        </section>
+
+    </main>
+
+    <footer class="flex bg-dark">
+        <div class="contact-footer">
+            <h6>Kontakt</h6>
+            <p>Frankfurter Tor 93 <br>
+                10243 Berlin</p>
+            <p><a href="tel:0123456789">0123 456789</a> <br>
+                <a href="mailto:naturshop@example.com">naturshop@example.com</a>
+            </p>
+        </div>
+        <div class="rechtliches">
+            <h6>Rechtliches</h6>
+            <p><a href="datenschutz.html">Datenschutz</a></p>
+            <p><a href="impressum.html">Impressum</a></p>
+        </div>
+        <div class="social-icons flex">
+            <a href="#"><img src="img/instagram.png" alt=""></a>
+            <a href="#"><img src="img/facebook.png" alt=""></a>
+            <a href="#"><img src="img/pinterest.png" alt=""></a>
+        </div>
+    </footer>
+
+    <script>
+        // openNav();
+
+        function openNav() {
+            document.getElementById("open-nav").classList.add("active");
+            document.getElementById("close-btn").style.display = "block";
+            document.getElementById("hamburger").style.display = "none";
+        }
+
+        function closeNav() {
+            document.getElementById("open-nav").classList.remove("active");
+            document.getElementById("close-btn").style.display = "none";
+            document.getElementById("hamburger").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
